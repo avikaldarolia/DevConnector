@@ -1,12 +1,13 @@
 const express  = require('express');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 //syntax for express. app refers to the name of whole backend application 
 const app = express();
 
 //connect database
 connectDB();
-
+app.use(cors());
 //Init Middleware - (Format for parsing data from API)
 app.use(express.json({extended: false}));
 
