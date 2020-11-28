@@ -20,7 +20,7 @@ const AddExperience = ({ addExperience, history }) => {
   const { company, title, location, from, to, current, description } = formData;
 
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: [e.target.value] });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <Fragment>
@@ -118,7 +118,7 @@ const AddExperience = ({ addExperience, history }) => {
 };
 
 AddExperience.propTypes = {
-  addExperience: PropTypes.func.isRequired
+  addExperience: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addExperience })(AddExperience);
+export default connect(null, { addExperience })(withRouter(AddExperience));
