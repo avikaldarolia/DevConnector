@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://avi:avi@devconnector.esiwm.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "bdd2d053446b9c615816",
+    "githubSecret": "d1643b871aeb4825808e0e4b5be6750daf66248e"
+}
