@@ -4,7 +4,7 @@ import {
   PROFILE_ERROR,
   CLEAR_PROFILE,
   UPDATE_PROFILE,
-  GET_REPOS
+  GET_REPOS,
 } from "../actions/types";
 
 const initialState = {
@@ -15,7 +15,7 @@ const initialState = {
   error: {},
 };
 
-export default function (state = initialState, action) {
+const profile = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -30,8 +30,8 @@ export default function (state = initialState, action) {
       return {
         ...state,
         profiles: payload,
-        loading: false
-      }
+        loading: false,
+      };
     case PROFILE_ERROR:
       return {
         ...state,
@@ -45,13 +45,15 @@ export default function (state = initialState, action) {
         repos: [],
         loading: false,
       };
-    case GET_REPOS: 
+    case GET_REPOS:
       return {
         ...state,
         repos: payload,
-        loading: false
-      }
+        loading: false,
+      };
     default:
       return state;
   }
-}
+};
+
+export default profile;
