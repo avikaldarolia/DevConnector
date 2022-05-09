@@ -26,7 +26,6 @@ router.get("/", auth, async (req, res) => {
 // @route POST api/auth
 // @desc Authenticate user and get token
 // @access Public
-
 //we label the call back function as async because we need to use await inside
 
 router.post(
